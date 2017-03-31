@@ -37,3 +37,15 @@ svg {
     height: 90%;
     border: 1px solid black;
 }
+
+@media (min-width: 0px)
+.navbar-right {
+    float: right!important;
+    margin-right: -15px;
+}
+
+@media (min-width: 768px)
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
