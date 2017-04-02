@@ -9,3 +9,6 @@ yikaiW -- 2017-3-29 @2:50
 yikaiW -- 2017-3-29 @10:50
 	centered svg, lowered height of header
 	added devlog
+
+yikaiW -- 2017-4-2 @4:30
+	fixed scaling issues
