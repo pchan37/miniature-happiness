@@ -1,4 +1,6 @@
 var billboard = require("billboard-top-100").getChart;
+
+x = "2016-09-01";
  
 // date defaults to saturday of this week 
  
@@ -25,7 +27,7 @@ listCharts(function(data){
 
 
 /*
-billboard('hot-100', '2016-08-27', function(songs, err){
+billboard('hot-100', '2016-12-31', function(songs, err){
     if (err) console.log(err);
     console.log(songs); //prints array of top 100 songs for week of August 27, 2016 
     console.log(songs[0].title); //prints title of top song for week of August 27, 2016 
@@ -44,7 +46,7 @@ listCharts(function(data){
 */
 
 
-billboard('hot-100', function(songs, err){
+billboard('hot-100', x+"", function(songs, err){
     if (err) console.log(err);
     console.log("hot-100");
     console.log("============================================================================");
@@ -58,7 +60,7 @@ billboard('hot-100', function(songs, err){
 
 
 
-billboard('pop-songs', function(songs, err){
+billboard('pop-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("pop-songs");
 	console.log("============================================================================");
@@ -68,7 +70,7 @@ billboard('pop-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('country-songs', function(songs, err){
+billboard('country-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("country-songs");
 	console.log("============================================================================");
@@ -78,7 +80,7 @@ billboard('country-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('rock-songs', function(songs, err){
+billboard('rock-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("rock-songs");
 	console.log("============================================================================");
@@ -88,7 +90,7 @@ billboard('rock-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('r-b-hip-hop-songs', function(songs, err){
+billboard('r-b-hip-hop-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("r-b-hip-hop-songs");
 	console.log("============================================================================");
@@ -98,7 +100,7 @@ billboard('r-b-hip-hop-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('dance-club-play-songs', function(songs, err){
+billboard('dance-club-play-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("dance-club-play-songs");
 	console.log("============================================================================");
@@ -108,7 +110,7 @@ billboard('dance-club-play-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('latin-songs', function(songs, err){
+billboard('latin-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("latin-songs");
 	console.log("============================================================================");
@@ -118,7 +120,7 @@ billboard('latin-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('christian-songs', function(songs, err){
+billboard('christian-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("christian-songs");
 	console.log("============================================================================");
@@ -128,7 +130,7 @@ billboard('christian-songs', function(songs, err){
 	console.log("============================================================================");
     });
 
-billboard('hot-holiday-songs', function(songs, err){
+billboard('hot-holiday-songs', x, function(songs, err){
 	if (err) console.log(err);
 	console.log("hot-holiday-songs");
 	console.log("============================================================================");
