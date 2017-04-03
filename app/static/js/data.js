@@ -1,16 +1,29 @@
 // Initialization
-var s = document.getElementById("svg");
+var year = document.getElementById("year");
+var data = document.getElementById("data");
 var ns = "http://www.w3.org/2000/svg";
-var height = $(window).height() * 0.9;
-var width = $(window).width();
-s.height = height;
-s.width = width;
+
+var yearh = $(window).height() * 0.13;
+var yearw = $(window).width();
+var datah = $(window).height() * 0.80;
+var dataw = $(window).width();
+
+year.height = yearh;
+year.width = yearw;
+data.height = datah;
+data.width = dataw;
 
 // Background
-var bg = document.createElementNS(ns, "rect");
-bg.setAttribute("width", width);
-bg.setAttribute("height", height);
-bg.setAttribute("style", "fill:rgb(16,16,16)");
-s.appendChild(bg);
+var yearbg = document.createElementNS(ns, "rect");
+yearbg.setAttribute("width", yearw);
+yearbg.setAttribute("height", yearh);
+yearbg.setAttribute("style", "fill:rgb(239, 239, 200)");
+year.appendChild(yearbg);
+
+var databg = document.createElementNS(ns, "rect");
+databg.setAttribute("width", dataw);
+databg.setAttribute("height", datah);
+databg.setAttribute("style", "fill:rgb(239, 239, 255)");
+data.appendChild(databg);
 
 console.log("Loaded js.")
