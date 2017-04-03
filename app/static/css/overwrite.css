@@ -6,10 +6,20 @@ body, html {
 header {
     position: absolute;
     background-color: lightsteelblue;
-    text-align: center;
     top: 0%;
     height: 7%;
     width: 100%;
+}
+
+#title {
+    text-align: center;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+#buttons {
+    transform: translate(50%, 50%);
+    height: 100%;
 }
 
 svg {
