@@ -9,17 +9,35 @@ header {
     top: 0%;
     height: 7%;
     width: 100%;
+    font-family: "Quicksand", "Arial", "Sans Serif";
 }
-
+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 #title {
-    text-align: center;
+    position: relative;
     float: left;
-    width: 30%;
+    width: 75%;
     height: 100%;
+    font-size: 2em;
+    left: -10%;
 }
 #buttons {
-    transform: translate(50%, 50%);
+    position: relative;
+    float: right;
     height: 100%;
+    width: 25%;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 24px;
+    font-family: "Quicksand", "Arial", "Sans Serif";
 }
 
 svg {
