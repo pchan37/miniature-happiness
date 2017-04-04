@@ -27,7 +27,6 @@ databg.setAttribute("style", "fill:rgb(239, 239, 255)");
 data.appendChild(databg);
 
 var rid = 0;
-var xcor, ycor;
 
 var stop = function(){
     window.cancelAnimationFrame(rid);
@@ -39,16 +38,17 @@ var clear = function(){
     }
 };
 
-/* keeps track of the xcor and ycor of mouse */
-svg.addEventListener("mousemove", function(evt) {
-    xcor = evt.offsetX;
-    ycor = evt.offsetY;
-});
+
+
+
+
 
 var data_years = function() {
-    svg.selectAll("div")
+    year.selectAll("div")
         .data(info)
         .enter()
         .append("div")
 };
+
+
 console.log("Loaded js.")
