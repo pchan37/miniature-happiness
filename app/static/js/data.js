@@ -70,4 +70,11 @@ var right_text = function() {
     //include facts underneath?
 };
 
+
+//adds event listener to the divs to show facts
+data.selectAll("div").addEventListener("click", function(evt) {
+    right_text();
+});
+
+
 console.log("Loaded js.")
