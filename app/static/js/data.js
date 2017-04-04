@@ -48,9 +48,10 @@ var data_years = function() {
         .data(info)
         .enter()
         .append("div")
+        .style("width", "100px")
         .style("height", function(d) {
            return d / 2 + "px";
-                         })
+        })
          .style("background-color", function(d,i) {
            return colors[i];
          })
@@ -61,7 +62,12 @@ var data_years = function() {
 
 //shows the text to the right of the divs
 var right_text = function() {
-    
+    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    t.setAttribute("x", "200px");
+    t.setAttribute("y", "50px");
+    t.innerHTML = "Genre Name:"
+    data.appendChild(t);
+    //include facts underneath?
 };
 
 console.log("Loaded js.")
