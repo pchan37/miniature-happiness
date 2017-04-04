@@ -42,7 +42,7 @@ var clear = function(){
 
 
 
-
+//shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function() {
     data.selectAll("div")
         .data(info)
@@ -59,5 +59,9 @@ var data_years = function() {
          });
 };
 
+//shows the text to the right of the divs
+var right_text = function() {
+    
+};
 
 console.log("Loaded js.")
