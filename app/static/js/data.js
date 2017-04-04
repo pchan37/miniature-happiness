@@ -62,12 +62,17 @@ var data_years = function() {
 
 //shows the text to the right of the divs
 var right_text = function() {
-    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    t.setAttribute("x", "200px");
-    t.setAttribute("y", "50px");
-    t.innerHTML = "Genre Name:"
-    data.appendChild(t);
-    //include facts underneath?
+    if(evt.target == this) { //gets what div calls to display relevant facts
+	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+	t.setAttribute("x", "200px");
+	t.setAttribute("y", "50px");
+	t.innerHTML = "Genre Name:"
+	data.appendChild(t);
+	//include facts underneath?
+	//most popular song
+
+
+    }
 };
 
 
