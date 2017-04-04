@@ -44,10 +44,19 @@ var clear = function(){
 
 
 var data_years = function() {
-    year.selectAll("div")
+    data.selectAll("div")
         .data(info)
         .enter()
         .append("div")
+        .style("height", function(d) {
+           return d / 2 + "px";
+                         })
+         .style("background-color", function(d,i) {
+           return colors[i];
+         })
+         .text( function(d, i) {
+            return text[i];
+         });
 };
 
 
