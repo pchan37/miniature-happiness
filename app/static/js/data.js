@@ -32,6 +32,49 @@ years = [];
 var x = yearw / 2;
 var y = 61;
 
+var result = []
+// Data Retrieval - By Year
+var get_data = function(year) {
+    var ret;
+    $.getJSON('/data/1999', {},
+	      function(data){
+          result = data.result;
+		  console.log(result);
+
+    });
+    return result;
+};
+
+var getFields = function(input, field) {
+    var output = [];
+    for (var i=0; i < input.length; ++i)
+        output.push(input[i][field]);
+    return output;
+};
+
+var colors = [ "agua", "azure", "chocolate", "coral", "dark salmon", "lime", "medium purple" ];
+
+//shows the data (popularity of the genre) accroding to year using divs as bar graph
+var data_years = function(year) {
+  var info = getFields(get_data(year), "song_count");
+  var text = getFields(get_data(year), "genre");
+
+    d3.selectAll("div")
+        .data(info)
+        .enter()
+        .append("div")
+        .style("width", "100px")
+        .style("height", function(d) {
+           return d * 2 + "px";
+        })
+         .style("background-color", function(d,i) {
+           return colors[i];
+         })
+         .text( function(d, i) {
+            return text[i];
+         });
+};
+
 var changedate = function(e) {
     var target = yearw / 2; // Target X Coordinate
     var deltax = target - e.target.getAttribute("x");
@@ -41,7 +84,7 @@ var changedate = function(e) {
 	years[i].setAttribute("x", parseInt(years[i].getAttribute("x")) + deltax);
     }
     // ADD DATA BINDING HERE
-
+      data_years(e.target.toString());
     // ADD DATA BINDING HERE
 }
 
@@ -82,53 +125,22 @@ for (i = 1997; i < 2018; i++) {
 //     //set variable for data to display corresponding facts?
 // });
 
-// Data Retrieval - By Year
-var get_data = function(year) {
-    var ret;
-    $.getJSON('/data/1999', {}, 
-	      function(data){
-		  console.log(data.result);
-                  
-	      });
-    return JSON.parse(data.result);
-   
-};
+// console.log(get_data(1999));
 
-console.log(get_data(1999));
-
-
-//shows the data (popularity of the genre) accroding to year using divs as bar graph
-var data_years = function() {
-    data.selectAll("div")
-        .data(info)
-        .enter()
-        .append("div")
-        .style("width", "100px")
-        .style("height", function(d) {
-           return d / 2 + "px";
-        })
-         .style("background-color", function(d,i) {
-           return colors[i];
-         })
-         .text( function(d, i) {
-            return text[i];
-         });
-};
-
-//shows the text to the right of the divs
-var right_text = function() {
-    if(evt.target == this) { //gets what div calls to display relevant facts
-	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-	t.setAttribute("x", "200px");
-	t.setAttribute("y", "50px");
-	t.innerHTML = "Genre Name:";
-	data.appendChild(t);
-	//include facts underneath?
-	//most popular song
-
-
-    }
-};
+// //shows the text to the right of the divs
+// var right_text = function() {
+//     if(evt.target == this) { //gets what div calls to display relevant facts
+// 	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+// 	t.setAttribute("x", "200px");
+// 	t.setAttribute("y", "50px");
+// 	t.innerHTML = "Genre Name:";
+// 	data.appendChild(t);
+// 	//include facts underneath?
+// 	//most popular song
+//
+//
+//     }
+// };
 
 //adds event listener to the divs to show facts
 // data.selectAll("div").addEventListener("click", function(evt) {
