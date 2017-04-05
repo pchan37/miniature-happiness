@@ -38,9 +38,18 @@ var clear = function(){
     }
 };
 
+// Data Retrieval - By Year
+var get_data = function(year) {
+    $.ajax( {
+	url : "data/1999.txt",
+	success : function(ret) {
+	    return ret;
+	}
+    } );
+}
 
-
-
+// Not Working
+//$.getJSON('../data/1999.txt', {}, function(data){ var array_data = JSON.parse(data.result)})
 
 //shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function() {
