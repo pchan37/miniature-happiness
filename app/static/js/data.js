@@ -85,18 +85,14 @@ for (i = 1997; i < 2018; i++) {
 // Data Retrieval - By Year
 var get_data = function(year) {
     var ret;
-    $.getJSON('127.0.0.1:5000/data/1999.txt', {}, 
-	      function(year){ ret = JSON.parse(data) } );
-    return ret;
-    /*
-    $.ajax( {
-	url : "127.0.0.1:5000/data/1999",
-	success : function(ret) {
-	    return ret;
-	}
-    } );
-    */
-}
+    $.getJSON('/data/1999', {}, 
+	      function(data){
+		  console.log(data.result);
+                  
+	      });
+    return JSON.parse(data.result);
+   
+};
 
 console.log(get_data(1999));
 
@@ -125,7 +121,7 @@ var right_text = function() {
 	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
 	t.setAttribute("x", "200px");
 	t.setAttribute("y", "50px");
-	t.innerHTML = "Genre Name:"
+	t.innerHTML = "Genre Name:";
 	data.appendChild(t);
 	//include facts underneath?
 	//most popular song

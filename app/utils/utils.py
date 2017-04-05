@@ -10,6 +10,8 @@ def get_data(year):
     for line in file_content:
         line = line.strip()
         genre, song_count = line.split(' ')
-        result.append([genre, song_count])
-    return jsonify(result)
+        print genre.__repr__(), song_count.__repr__()
+        result.append({"genre": genre, "song_count": int(song_count)})
+    print result
+    return jsonify(result=result)
 
