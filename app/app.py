@@ -9,6 +9,10 @@ app.register_blueprint(utils)
 def home():
     return render_template('index.html')
 
+@app.route('/about/')
+def about():
+    return render_template("about.html")
+
 def main():
     app.debug = True
     app.run()
