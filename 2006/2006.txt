@@ -1,0 +1,6 @@
+latin 2
+christian 1
+dance 10
+country 18
+pop 34
+hiphop 38
