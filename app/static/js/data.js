@@ -38,9 +38,26 @@ var clear = function(){
     }
 };
 
+//make the years display as text
+var space = 20;
+var years_display = function(d) {
+  //length = # of years
+  for(int i = 0; i < length; i++) {
+    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  	t.setAttribute("x", 200 + space + "px");
+  	t.setAttribute("y", "50px");
+  	t.innerHTML = d + "";
+  	data.appendChild(t);
+    space += 50;
+  }
+}
 
+//adds event listener to the text to select year
+years.selectAll("text").addEventListener("click", function(evt) {
+    //set variable for data to display corresponding facts?
 
-
+    
+});
 
 //shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function() {
