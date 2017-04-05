@@ -1,7 +1,7 @@
 christian 2
-dance 10
-country 19
-pop 34
-hiphop 32
+dance 9
+country 18
+pop 32
+hiphop 29
 rock 5
 holiday 5

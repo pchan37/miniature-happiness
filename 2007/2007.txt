@@ -4,4 +4,3 @@ dance 7
 country 15
 pop 37
 hiphop 30
-other 5

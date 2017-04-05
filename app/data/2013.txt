@@ -1,6 +1,6 @@
-dance 15
-country 25
-pop 36
-hiphop 27
-rock 12
+dance 13
+country 21
+pop 31
+hiphop 23
+rock 10
 holiday 2

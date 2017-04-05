@@ -1,0 +1,6 @@
+latin 4
+dance 7
+country 17
+pop 38
+hiphop 28
+rock 13
