@@ -24,7 +24,7 @@ years = [];
 var x = yearw / 2;
 var y = 61;
 
-var result = []
+var result = [];
 // Data Retrieval - By Year
 var get_data = function(year) {
     var ret;
@@ -83,9 +83,10 @@ var changedate = function(e) {
     }
 
     // ADD DATA BINDING HERE
+    data_years(e.target.innerHTML);
     console.log(e.target.innerHTML);
-      data_years(e.target.innerHTML);
-}
+    
+};
 
 for (i = 1997; i < 2018; i++) {
     var t = document.createElementNS(ns, "text");
@@ -101,50 +102,5 @@ for (i = 1997; i < 2018; i++) {
     t.addEventListener("click", changedate);
     x += 125;
 }
-// console.log(years); // Debugging
-// console.log(years[0]); // Debugging
-// =========================================
 
-// //make the years display as text
-// var space = 20;
-// var years_display = function(d) {
-//   //length = # of years
-//     for(int i = 0; i < length; i++) {
-// 	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-//   	t.setAttribute("x", 200 + space + "px");
-//   	t.setAttribute("y", "50px");
-//   	t.innerHTML = d + "";
-//   	data.appendChild(t);
-// 	space += 50;
-//     }
-// }
-
-// //adds event listener to the text to select year
-// years.selectAll("text").addEventListener("click", function(evt) {
-//     //set variable for data to display corresponding facts?
-// });
-
-// console.log(get_data(1999));
-
-// //shows the text to the right of the divs
-// var right_text = function() {
-//     if(evt.target == this) { //gets what div calls to display relevant facts
-// 	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-// 	t.setAttribute("x", "200px");
-// 	t.setAttribute("y", "50px");
-// 	t.innerHTML = "Genre Name:";
-// 	data.appendChild(t);
-// 	//include facts underneath?
-// 	//most popular song
-//
-//
-//     }
-// };
-
-//adds event listener to the divs to show facts
-// data.selectAll("div").addEventListener("click", function(evt) {
-//     right_text();
-// });
-
-
-console.log("Loaded js.")
+console.log("Loaded js.");
