@@ -78,13 +78,13 @@ var changedate = function(e) {
     // console.log(target); // Debugging
     // console.log(deltax); // Debugging
 
-    // ADD DATA BINDING HERE
-    console.log(e.target.innerHTML);
-      data_years(e.target.innerHTML);
-      
     for (i = 0; i < years.length; i++) {
 	years[i].setAttribute("x", parseInt(years[i].getAttribute("x")) + deltax);
     }
+
+    // ADD DATA BINDING HERE
+    console.log(e.target.innerHTML);
+      data_years(e.target.innerHTML);
 }
 
 for (i = 1997; i < 2018; i++) {
