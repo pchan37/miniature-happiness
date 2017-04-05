@@ -33,14 +33,16 @@ var x = yearw / 2;
 var y = 61;
 
 var changedate = function(e) {
-
     var target = yearw / 2; // Target X Coordinate
     var deltax = target - e.target.getAttribute("x");
-    console.log(target);
-    console.log(deltax);
+    // console.log(target); // Debugging
+    // console.log(deltax); // Debugging
     for (i = 0; i < years.length; i++) {
-	t[i].setAttribute("x", t[i].getAttribute("x") + deltax);
+	years[i].setAttribute("x", parseInt(years[i].getAttribute("x")) + deltax);
     }
+    // ADD DATA BINDING HERE
+
+    // ADD DATA BINDING HERE
 }
 
 for (i = 1997; i < 2018; i++) {
@@ -53,37 +55,33 @@ for (i = 1997; i < 2018; i++) {
     t.setAttribute("fill", "Black");
     t.textContent = String(i);
     year.appendChild(t);
-    years += {t};
+    years.push(t);
     t.addEventListener("click", changedate);
     x += 125;
 }
-console.log(years);
-console.log(years[2]);
-
-
-
+// console.log(years); // Debugging
+// console.log(years[0]); // Debugging
 // =========================================
 
-//make the years display as text
-var space = 20;
-var years_display = function(d) {
-  //length = # of years
-  for(int i = 0; i < length; i++) {
-    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-  	t.setAttribute("x", 200 + space + "px");
-  	t.setAttribute("y", "50px");
-  	t.innerHTML = d + "";
-  	data.appendChild(t);
-    space += 50;
-  }
-}
+// //make the years display as text
+// var space = 20;
+// var years_display = function(d) {
+//   //length = # of years
+//     for(int i = 0; i < length; i++) {
+// 	var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+//   	t.setAttribute("x", 200 + space + "px");
+//   	t.setAttribute("y", "50px");
+//   	t.innerHTML = d + "";
+//   	data.appendChild(t);
+// 	space += 50;
+//     }
+// }
 
-//adds event listener to the text to select year
-years.selectAll("text").addEventListener("click", function(evt) {
-    //set variable for data to display corresponding facts?
+// //adds event listener to the text to select year
+// years.selectAll("text").addEventListener("click", function(evt) {
+//     //set variable for data to display corresponding facts?
+// });
 
-    
-});
 // Data Retrieval - By Year
 var get_data = function(year) {
     var ret;
