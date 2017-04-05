@@ -26,17 +26,43 @@ databg.setAttribute("height", datah);
 databg.setAttribute("style", "fill:rgb(239, 239, 255)");
 data.appendChild(databg);
 
-var rid = 0;
+// =========================================
+// Year Bar
+years = [];
+var x = yearw / 2;
+var y = 61;
 
-var stop = function(){
-    window.cancelAnimationFrame(rid);
-};
+var changedate = function(e) {
 
-var clear = function(){
-    while (svg.lastChild){
-        svg.removeChild(svg.lastChild);
+    var target = yearw / 2; // Target X Coordinate
+    var deltax = target - e.target.getAttribute("x");
+    console.log(target);
+    console.log(deltax);
+    for (i = 0; i < years.length; i++) {
+	t[i].setAttribute("x", t[i].getAttribute("x") + deltax);
     }
-};
+}
+
+for (i = 1997; i < 2018; i++) {
+    var t = document.createElementNS(ns, "text");
+    t.setAttribute("x", x);
+    t.setAttribute("y", y);
+    t.setAttribute("font-family", "Quicksand");
+    t.setAttribute("font-size", "36px");
+    t.setAttribute("text-anchor", "middle");
+    t.setAttribute("fill", "Black");
+    t.textContent = String(i);
+    year.appendChild(t);
+    years += {t};
+    t.addEventListener("click", changedate);
+    x += 125;
+}
+console.log(years);
+console.log(years[2]);
+
+
+
+// =========================================
 
 //make the years display as text
 var space = 20;
@@ -58,6 +84,24 @@ years.selectAll("text").addEventListener("click", function(evt) {
 
     
 });
+// Data Retrieval - By Year
+var get_data = function(year) {
+    var ret;
+    $.getJSON('127.0.0.1:5000/data/1999.txt', {}, 
+	      function(year){ ret = JSON.parse(data) } );
+    return ret;
+    /*
+    $.ajax( {
+	url : "127.0.0.1:5000/data/1999",
+	success : function(ret) {
+	    return ret;
+	}
+    } );
+    */
+}
+
+console.log(get_data(1999));
+
 
 //shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function() {
@@ -92,11 +136,10 @@ var right_text = function() {
     }
 };
 
-
 //adds event listener to the divs to show facts
-data.selectAll("div").addEventListener("click", function(evt) {
-    right_text();
-});
+// data.selectAll("div").addEventListener("click", function(evt) {
+//     right_text();
+// });
 
 
 console.log("Loaded js.")
