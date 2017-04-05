@@ -1,5 +1,5 @@
 dance 7
-country 19
-hiphop 46
+country 18
+hiphop 41
 christian 3
-pop 33
+pop 29
