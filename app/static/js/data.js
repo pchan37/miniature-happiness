@@ -44,7 +44,7 @@ var getFields = function(input, field) {
     return output;
 };
 
-var colors = [ "agua", "azure", "chocolate", "coral", "dark salmon", "lime", "medium purple" ];
+var colors = [ "LawnGreen", "LightSeaGreen", "MediumSlateBlue", "chocolate", "coral", "darksalmon", "mediumpurple", "MediumOrchid" ];
 
 //shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function(year) {
