@@ -10,8 +10,6 @@ var dataw = $(window).width();
 
 year.height = yearh;
 year.width = yearw;
-data.height = datah;
-data.width = dataw;
 
 // Background
 var yearbg = document.createElementNS(ns, "rect");
@@ -19,12 +17,6 @@ yearbg.setAttribute("width", yearw);
 yearbg.setAttribute("height", yearh);
 yearbg.setAttribute("style", "fill:rgb(239, 239, 200)");
 year.appendChild(yearbg);
-
-var databg = document.createElementNS(ns, "rect");
-databg.setAttribute("width", dataw);
-databg.setAttribute("height", datah);
-databg.setAttribute("style", "fill:rgb(239, 239, 255)");
-data.appendChild(databg);
 
 // =========================================
 // Year Bar
@@ -36,7 +28,7 @@ var result = []
 // Data Retrieval - By Year
 var get_data = function(year) {
     var ret;
-    $.getJSON('/data/1999', {},
+    $.getJSON('/data/' + year, {},
 	      function(data){
           result = data.result;
 		  console.log(result);
@@ -56,22 +48,27 @@ var colors = [ "agua", "azure", "chocolate", "coral", "dark salmon", "lime", "me
 
 //shows the data (popularity of the genre) accroding to year using divs as bar graph
 var data_years = function(year) {
+  while (data.lastChild){
+        data.removeChild(data.lastChild);
+    }
+
   var info = getFields(get_data(year), "song_count");
   var text = getFields(get_data(year), "genre");
 
-    d3.selectAll("div")
+  var graph = d3.select("#data");
+    graph.selectAll("div")
         .data(info)
         .enter()
         .append("div")
-        .style("width", "100px")
+        .style("width", "200px")
         .style("height", function(d) {
-           return d * 2 + "px";
+           return d * 5 + "px";
         })
          .style("background-color", function(d,i) {
            return colors[i];
          })
          .text( function(d, i) {
-            return text[i];
+            return text[i] + " " + info[i] + "%";
          });
 };
 
@@ -80,12 +77,14 @@ var changedate = function(e) {
     var deltax = target - e.target.getAttribute("x");
     // console.log(target); // Debugging
     // console.log(deltax); // Debugging
+
+    // ADD DATA BINDING HERE
+    console.log(e.target.innerHTML);
+      data_years(e.target.innerHTML);
+      
     for (i = 0; i < years.length; i++) {
 	years[i].setAttribute("x", parseInt(years[i].getAttribute("x")) + deltax);
     }
-    // ADD DATA BINDING HERE
-      data_years(e.target.toString());
-    // ADD DATA BINDING HERE
 }
 
 for (i = 1997; i < 2018; i++) {
