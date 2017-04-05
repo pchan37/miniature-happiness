@@ -1,8 +1,8 @@
 latin 1
 christian 1
-dance 12
+dance 11
 country 10
-pop 29
-hiphop 41
+pop 26
+hiphop 37
 rock 3
 holiday 11

@@ -2,5 +2,5 @@ latin 1
 christian 1
 dance 14
 country 19
-pop 40
+pop 36
 hiphop 29
