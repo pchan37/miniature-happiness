@@ -1,0 +1,6 @@
+dance 15
+country 25
+pop 36
+hiphop 27
+rock 12
+holiday 2

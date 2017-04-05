@@ -1,6 +1,6 @@
 var billboard = require("billboard-top-100").getChart;
 
-x = "2017-01-07";
+//x = "2017-01-07";
 //x = "2016-01-02";                                          
 //x = "2015-01-03";                                          
 //x = "2014-01-04";                                          
@@ -25,7 +25,7 @@ x = "2017-01-07";
 billboard('country-songs', x, function(songs, err){
         if (err) console.log(err);
         console.log("country-songs");
-        console.log("============================================================================");
-        console.log(songs); //prints array of top 100 songs                                                                                                                        
-        console.log("============================================================================");
+        for (i = 0; i < 100; i++) {
+            console.log(songs[i].title + ",");
+        }
     });

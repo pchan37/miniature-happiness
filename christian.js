@@ -1,6 +1,6 @@
 var billboard = require("billboard-top-100").getChart;
 
-x = "2017-01-07";
+//x = "2017-01-07";
 //x = "2016-01-02";
 //x = "2015-01-03";
 //x = "2014-01-04";
@@ -26,6 +26,6 @@ billboard('christian-songs', x, function(songs, err){
         if (err) console.log(err);
 	console.log("christian-songs");
 	for (i = 0; i < 100; i++) {
-	    console.log(songs[0].title + ",");
+            console.log(songs[i].title + " ");
 	}
     });
