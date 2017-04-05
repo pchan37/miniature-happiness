@@ -26,6 +26,6 @@ billboard('country-songs', x, function(songs, err){
         if (err) console.log(err);
         console.log("country-songs");
         for (i = 0; i < 100; i++) {
-            console.log(songs[0].title + ",");
+            console.log(songs[i].title + ",");
         }
     });

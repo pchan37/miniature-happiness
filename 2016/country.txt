@@ -1,181 +1,52 @@
-[?1049h[?12;25h[?1h=[53;1H[?25l----:---F1  [1m*scratch*   [0m   All L1     (Fundamental)--------------------------------------------------------------------------------------------------------------------------------
-[A[H[?12l[?25h[?12;25h[H[2J[54d[?25lLoading encoded-kb...[K[H[?12l[?25h[?12;25h[54;22H[?25ldone[H[?12l[?25h[?12;25h[54d[K[?1l>[?12l[?25h[?1049l[39;49m[?1049h[?12;25h[?1h=[H[2J[54d[K[?1l>[?12l[?25h[?1049l[39;49m[?1049h[?12;25h[?1h=[54;1H[?25lFor information about the GNU Project and its goals, type C-h C-p.[K[H
-[?12l[?25h[?12;25h[54d[?25lLoading image...[K[H
-[?12l[?25h[?12;25h[54;17H[?25ldone[H
-[?12l[?25h[?12;25h[54;9H[?25lcc-mode...[K[H
-[?12l[?25h[?12;25h[54;19H[?25ldone[H
-[?12l[?25h[?12;25h[54d[?25lLoading cc-mode...done[K[H[38;5;28mvar[39;49m [38;5;136mbillboard[39;49m = require([38;5;138m"billboard-top-100"[39;49m).getChart;[K
-[K
-[38;5;124m//x = "2017-01-07";                                                                                                                                                                [39;49m
-[A
-x = [38;5;138m"2016-01-02"[39;49m;[K
-[38;5;124m//x = "2015-01-03";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2014-01-04";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2013-01-05";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2012-01-07";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2011-01-01";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2010-01-02";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2009-01-03";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2008-01-05";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2007-01-06";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2006-01-07";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2005-01-01";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2004-01-03";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2003-01-04";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2002-01-05";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2001-01-06";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "2000-01-01";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "1999-01-02";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "1998-01-03";                                                                                                                                                                [39;49m
-[A
-[38;5;124m//x = "1997-01-04";                                                                                                                                                                [39;49m
-[A
-[K
-billboard([38;5;138m'country-songs'[39;49m, x, function(songs, err){[K
-        [38;5;129mif[39;49m (err) console.log(err);[K
-        console.log([38;5;138m"country-songs"[39;49m);[K
-        [38;5;129mfor[39;49m (i = 0; i < 100; i++) {[K
-            console.log(songs[0].title + [38;5;138m","[39;49m);[K
-        }[K
-    });[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[K
-[30m[48;5;250m-uu-:---F1  [39;49m[1m[30m[48;5;250mcountry.js  [0m[39;49m[30m[48;5;250m   All L1     (Java/l Abbrev)------------------------------------------------------------------------------------------------------------------------------[39;49m
-[A[H[?12l[?25h[?12;25h[54d[K[H[54d[?25l(No files need saving)[H[?12l[?25h[?12;25h[54d[K[?1l>[?12l[?25h[?1049l[39;49mhttp://www.billboard.com/charts/country-songs/2016-01-02
+http://www.billboard.com/charts/country-songs/2016-01-02
 country-songs
 Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
-Die A Happy Man,
+Burning House,
+Break Up In A Small Town,
+Burning House,
+Stay A Little Longer,
+I'm Comin' Over,
+Home Alone Tonight,
+Gonna,
+Gonna Know We Were Here,
+You Should Be Here,
+I Got The Boy,
+I Love This Life,
+Top Of The World,
+Dibs,
+Strip It Down,
+Backroad Song,
+Beautiful Drug,
+Smoke Break,
+Islands In The Stream,
+Break On Me.,
+We Went,
+Mr. Misunderstood,
+Tennessee Whiskey,
+Country Nation,
+Nobody To Blame,
+Confession,
+Heartbeat,
+That Don't Sound Like You,
+I Like The Sound Of That,
+Die A Happy Man,
+Little Bit Of You,
+Drunk On Your Love,
+(This Ain't No) Drunk Dial,
+Blue Christmas,
+Stone Cold Sober,
+Shut Up And Fish,
+Snapback,
+Better In Boots,
+Real Men Love Jesus,
+Rhinestone Cowboy,
+Run Away With You,
+Head Over Boots,
+Night's On Fire,
+Silent Night,
+Mind Reader,
+Traveller,
+Crazy Over Me,
+It All Started With A Beer,
+Cold Beer Conversation,
+Yup,

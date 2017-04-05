@@ -20,12 +20,12 @@ var billboard = require("billboard-top-100").getChart;
 //x = "2000-01-01";                                          
 //x = "1999-01-02";                                          
 //x = "1998-01-03";                                          
-x = "1997-01-04"; 
+//x = "1997-01-04"; 
 
 billboard('r-b-hip-hop-songs', x, function(songs, err){
         if (err) console.log(err);
         console.log("r-b-hip-hop-songs");
         for (i = 0; i < 100; i++) {
-            console.log(songs[0].title + ",");
+            console.log(songs[i].title + ",");
         }
     });
