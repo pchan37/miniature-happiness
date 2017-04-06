@@ -1,5 +1,5 @@
-dance 9
+dance 10
 country 21
 hiphop 35
 latin 1
-pop 34
+pop 33

@@ -2,5 +2,5 @@ latin 4
 dance 7
 country 16
 pop 35
-hiphop 25
-rock 13
+hiphop 26
+rock 12
