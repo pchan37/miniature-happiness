@@ -28,11 +28,14 @@ var result = [];
 // Data Retrieval - By Year
 var get_data = function(year) {
     var ret;
-    $.getJSON('/data/' + year, {},
-	      function(data){
-          result = data.result;
-		  console.log(result);
-
+    $.ajax({
+	url: '/data/' + year,
+	dataType: 'json',
+	async: false,
+	success: function(data){
+	    result = data.result;
+	    console.log(result);
+	}
     });
     return result;
 };
@@ -73,6 +76,8 @@ var data_years = function(year) {
 };
 
 var changedate = function(e) {
+    e.preventDefault();
+    
     var target = yearw / 2; // Target X Coordinate
     var deltax = target - e.target.getAttribute("x");
     // console.log(target); // Debugging
@@ -102,5 +107,6 @@ for (i = 1997; i < 2018; i++) {
     t.addEventListener("click", changedate);
     x += 125;
 }
+data_years('1997');
 
 console.log("Loaded js.");
